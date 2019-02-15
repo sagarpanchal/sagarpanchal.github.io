@@ -1,4 +1,6 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
   <meta charset="UTF-8">
   <title>Résumé&nbsp;|&nbsp;Sagar Panchal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
@@ -146,36 +148,35 @@
       <div class="ripples"></div>
     </a>
   </div>
-  <script type="text/javascript">
-    window.addEventListener("load", function() {
-      function t(t, e) {
-        var n = e.target, i = n.classList;
-        if (!i.contains("ripples")) return !1;
-        var d = n.getAttribute("data-event");
-        if (d && d != t) return !1;
-        n.setAttribute("data-event", t);
-        var o, a = n.getBoundingClientRect(), r = e.offsetX;
-        void 0 !== r ? o = e.offsetY : (r = e.clientX - a.left, o = e.clientY - a.top);
-        var s, c = document.createElement("div");
-        s = a.width == a.height ? 1.412 * a.width : Math.sqrt(a.width * a.width + a.height * a.height);
-        var u = 2 * s + "px";
-        c.style.width = u, c.style.height = u, c.style.marginLeft = -s + r + "px", c.style.marginTop = -s + o + "px", c.className = "ripple", n.appendChild(c), window.setTimeout(function() {
-          c.classList.add("held")
-        }, 0);
-        var h = "mousedown" == t ? "mouseup" : "touchend", l = function(t) {
-          document.removeEventListener(h, l), c.classList.add("done"), window.setTimeout(function() {
-            n.removeChild(c), n.children.length || (i.remove("active"), n.removeAttribute("data-event"))
-          }, 650)
-        };
-        document.addEventListener(h, l)
-      }
-      document.addEventListener("mousedown", function(e) {
-        0 == e.button && t(e.type, e)
-      }), document.addEventListener("touchstart", function(e) {
-        for (var n = 0; n < e.changedTouches.length; ++n) t(e.type, e.changedTouches[n])
-      })
-    });
-  </script>
-
-
-</body></html>
+<script type="text/javascript">
+  window.addEventListener("load", function() {
+    function t(t, e) {
+      var n = e.target, i = n.classList;
+      if (!i.contains("ripples")) return !1;
+      var d = n.getAttribute("data-event");
+      if (d && d != t) return !1;
+      n.setAttribute("data-event", t);
+      var o, a = n.getBoundingClientRect(), r = e.offsetX;
+      void 0 !== r ? o = e.offsetY : (r = e.clientX - a.left, o = e.clientY - a.top);
+      var s, c = document.createElement("div");
+      s = a.width == a.height ? 1.412 * a.width : Math.sqrt(a.width * a.width + a.height * a.height);
+      var u = 2 * s + "px";
+      c.style.width = u, c.style.height = u, c.style.marginLeft = -s + r + "px", c.style.marginTop = -s + o + "px", c.className = "ripple", n.appendChild(c), window.setTimeout(function() {
+        c.classList.add("held")
+      }, 0);
+      var h = "mousedown" == t ? "mouseup" : "touchend", l = function(t) {
+        document.removeEventListener(h, l), c.classList.add("done"), window.setTimeout(function() {
+          n.removeChild(c), n.children.length || (i.remove("active"), n.removeAttribute("data-event"))
+        }, 650)
+      };
+      document.addEventListener(h, l)
+    }
+    document.addEventListener("mousedown", function(e) {
+      0 == e.button && t(e.type, e)
+    }), document.addEventListener("touchstart", function(e) {
+      for (var n = 0; n < e.changedTouches.length; ++n) t(e.type, e.changedTouches[n])
+    })
+  });
+</script>
+</body>
+</html>
