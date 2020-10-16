@@ -1,49 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
   <title>Résumé&nbsp;|&nbsp;Sagar Panchal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
   <style>
     * { -webkit-box-sizing: border-box; box-sizing: border-box }
     html { font-family: 'Ubuntu',sans-serif; color: #383c4a }
-    body { margin: 8px 24px; background-color: #f9f9f9 }
+    body { margin: .5rem 1.5rem; background-color: #f9f9f9 }
     abbr { text-decoration: none }
-    h2 { font-size: 22px }
-    h3 { font-size: 18px }
-    p, a, ul { font-size: 16px }
-    hr { margin: 8px 0; border: 0; border-bottom: 1px solid #878a92 }
-    ul { padding: 0 0 0 22px; list-style-type: square }
+    h2 { font-size: 1.375rem }
+    h3 { font-size: 1.125rem }
+    p, a, ul { font-size: 1rem }
+    hr { margin: .5rem 0; border: 0; border-bottom: 1px solid #878a92 }
+    ul { padding: 0 0 0 1.375rem; list-style-type: square }
     h2, h3, p, ul, a { margin: 0; line-height: 200% }
     table { border-collapse: collapse }
     tr > td { padding: 0 }
 
-    #table-skills tr > td:nth-child(1) { text-align: right; width: 138px }
-    #btn-group-fixed-bottom { position: fixed; bottom: 16px; right: 24px; }
-    a.btn-fixed { float: left; position: relative; font-size: 22px; font-weight: 700; cursor: pointer; text-decoration: none; background-color: #383c4a; color: #fff; text-align: center; border-radius: 4px; padding: 8px; -webkit-box-shadow: 0 0 3px #555; box-shadow: 0 0 3px #555; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
-    a.btn-fixed:not(:last-child) { margin: 0 8px 0 0 }
-    a.btn-fixed::before { content: ' '; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius:4px; -webkit-box-shadow: 0 0 9px #555; box-shadow: 0 0 9px #555; opacity: 0; -webkit-transition: opacity .3s; -o-transition: opacity .3s; transition: opacity 500ms }
+    .table tr > td:nth-child(1) { text-align: right; width: 8.625rem; vertical-align: top }
+    .table tr > td:nth-child(2) { vertical-align: top }
+    #btn-group-fixed-bottom { position: fixed; bottom: 1rem; right: 1.5rem; }
+    a.btn-fixed { float: left; position: relative; font-size: 1.375rem; font-weight: 700; cursor: pointer; text-decoration: none; background-color: #383c4a; color: #fff; text-align: center; border-radius: .25rem; padding: .5rem; -webkit-box-shadow: 0 0 .1875rem #555; box-shadow: 0 0 .1875rem #555; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
+    a.btn-fixed:not(:last-child) { margin: 0 .5rem 0 0 }
+    a.btn-fixed::before { content: ' '; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius:4px; -webkit-box-shadow: 0 0 .5625rem #555; box-shadow: 0 0 9px #555; opacity: 0; -webkit-transition: opacity .3s; -o-transition: opacity .3s; transition: opacity 500ms }
     a.btn-fixed:hover::before { opacity: 1 }
-    a.btn-fixed > svg { width: 32px; height: 32px; display: block }
+    a.btn-fixed > svg { width: 2rem; height: 2rem; display: block }
 
     @media (max-width: 767px) {
       body { margin: 8px }
-      h2 { font-size: 16px }
-      h3 { font-size: 14px }
-      p, a, ul { font-size: 12px }
-      ul { padding: 0 0 0 16px }
-      hr { margin: 3px 0 6px }
-      #table-skills tr > td:nth-child(1) { width: 103px }
-      #btn-group-fixed-bottom { position: fixed; bottom: auto; top: 6px; right: 8px }
-      a.btn-fixed { padding: 6px }
-      a.btn-fixed:not(:last-child) { margin: 0 4px 0 0 }
-      a.btn-fixed > svg { width: 22px; height: 22px }
-    }
-
-    @media (max-width: 543px) {
-      p.about > span { display: inline-block; padding: 0 12px 0 0 }
-      p.about > span:nth-of-type(2n) { display: none }
+      html { font-size: .75rem  }
+      #btn-group-fixed-bottom { position: fixed; bottom: auto; top: .375rem; right: .5rem }
+      /* a.btn-fixed > svg { width: 1.375rem; height: 1.375rem } */
+      p.about > span:nth-of-type(2n) { display: block; font-size: 0; line-height: 0; opacity: 0; }
     }
 
     .ripples, .ripples.fill::after { position: absolute; top: 0; left: 0; right: 0; bottom: 0 }
@@ -67,46 +58,60 @@
 <body>
   <h2>Panchal Sagar</h2>
   <hr>
-  <p class="about"><span>sagarpanchal.github.io</span><span> &nbsp;|&nbsp; </span><span>panchal.sagar@outlook.com</span><span> &nbsp;|&nbsp; </span><span>+91 84 69 553399</span><span> &nbsp;|&nbsp; </span><span>Surat, India.</span></p><br>
+  <p class="about"><span><b>Website :</b> sagarpanchal.github.io</span><span> &nbsp;|&nbsp; </span><span><b>Email :</b> panchal.sagar@outlook.com</span><span> &nbsp;|&nbsp; </span><span><b>Phone :</b> +91 84 69 553399</span><span> &nbsp;|&nbsp; </span><span><b>City :</b> Surat, India.</span></p><br>
   <h3>Education</h3><hr>
   <ul>
     <li>
       <p>S.V. Patel College Of Computer Science and Business Management (Surat, India)</p>
       <ul>
-        <li><p>Bachelor of Computer Application (February 2015) CGPA 5.80</p></li>
+        <li><p>Bachelor of Computer Applications</p></li>
+      </ul>
+    </li>
+    
+  </ul><br>
+  <h3>Experience</h3><hr>
+  <ul>
+    <li>
+      <p>Coruscate Solutions Pvt. Ltd. (Station Road, Surat)</p>
+      <ul>
+        <li>Programmer Analyst (Full-stack JavaScript developer) (July 2020 - Present)</li>
       </ul>
     </li>
     <li>
-      <p>Bhagwan Mahavir College of Management (Surat, India)</p>
+      <p>Narola Infotech (Adajan, Surat)</p>
       <ul>
-        <li><p>Master of Computer Application</p></li>
+        <li>Software Engineer (Full-stack JavaScript developer) (January 2019 - July 2020)</li>
       </ul>
     </li>
   </ul><br>
   <h3>Skills</h3><hr>
-  <table id="table-skills">
+  <table class="table">
     <tbody>
       <tr>
         <td><p>Programming</p></td><td><p>&nbsp;:&nbsp;</p></td>
-        <td><p>PHP (CodeIgniter, WordPress), Java (Android), JavaScript/jQuery, C</p></td>
+        <td><p>JavaScript/TypeScript (Socket.io, ExpressJS, ReactJS, Angular 9)</p></td>
+      </tr>
+      <tr>
+        <td><p>Testing</p></td><td><p>&nbsp;:&nbsp;</p></td>
+        <td><p>Jest, Mocha</p></td>
       </tr>
       <tr>
         <td><p>Database</p></td><td><p>&nbsp;:&nbsp;</p></td>
-        <td><p>MySQL/MariaDB, SQLite</p></td>
+        <td><p>MongoDB (mongoose), Redis(ioredis)</p></td>
       </tr>
       <tr>
-        <td><p>Source Control</p></td><td><p>&nbsp;:&nbsp;</p></td>
-        <td><p>Git (GitHub)</p></td>
+        <td><p>SourceControl/DevOps</p></td><td><p>&nbsp;:&nbsp;</p></td>
+        <td><p>Git (GitHub, GitLab, BitBucket, Azure DevOps)</p></td>
       </tr>
       <tr>
         <td><p>Designing</p></td><td><p>&nbsp;:&nbsp;</p></td>
         <td><p>CSS/SASS, SVG (InkScape)</p></td>
       </tr>
-        <tr><td><p>IDEs &amp; Editors</p></td><td><p>&nbsp;:&nbsp;</p></td>
-        <td><p>Atom, VS Code, phpMyAdmin, InkScape, Firefox/Chrome, FileZilla, Android Studio, IDLE, Arduino IDE</p></td>
+        <tr><td><p>IDEs/Tools</p></td><td><p>&nbsp;:&nbsp;</p></td>
+        <td><p>Visual Studio Code, WebStorm, Chrome/Firefox, Insomnia/Postman, Robo 3T, FileZilla, InkScape</p></td>
       </tr>
       <tr>
-        <td><p>Operating Systems</p></td><td><p>&nbsp;:&nbsp;</p></td>
+        <td><p>OperatingSystems</p></td><td><p>&nbsp;:&nbsp;</p></td>
         <td><p>Debain/Ubuntu, Fedora/CentOS, Windows</p></td>
       </tr>
       <tr>
@@ -116,27 +121,31 @@
       </tr>
     </tbody>
   </table><br>
+  <h3>Willing to work with</h3><hr>
+  <p>ReactJS, NodeJS (Javascript/TypeScript) </p><br>
   <h3>Courses</h3><hr>
   <ul>
-    <li><p>WordPress Theme Development with Bootstrap on Udemy</p></li>
-    <li><p>The Complete Android N Developer Course on Udemy</p></li>
-    <li><p>Angular 5 on Udemy</p></li>
-  </ul><br>
-  <h3>Other Skills</h3><hr>
-  <p>Completed Basic Computer Electronics and Hardware training from Jetking. (September, 2013)</p><br>
-  <h3>Willing to work with</h3><hr>
-  <p>PHP, JavaScript, CSS, MySQL/MariaDB.</p><br>
+    <li><p>Basic Computer Electronics and Hardware training from Jetking</p></li>
+    <li><p>The Complete Android N Developer Course by Rob Percival</p></li>
+    <li><p>WordPress Theme Development with Bootstrap by Brad Hussey</p></li>
+    <li><p>NodeJS - The Complete Guide to Build RESTful APIs by Mosh Hamedani</p></li>
+    <li><p>NodeJS - The Complete Guide by Maximilian Schwarzmüller</p></li>
+    <li><p>Mastering React by Mosh Hamedani</p></li>
+    <li><p>React - The Complete Guide by Maximilian Schwarzmüller</p></li>
+    <li><p>Angular - The Complete Guide by Maximilian Schwarzmüller</p></li>
+    
+  </ul><br><br>
   <h3>Projects</h3><hr>
   <ul>
+    <li><p>WebApp – Dictionary – (PHP, MariaDB, C, JavaScript, CSS)</p></li>
     <li><p>Website – SoftwareHub – (PHP, MySQL, ShellScript, JavaScript, CSS)</p></li>
-    <li><p>Website – Dictionary – (PHP, MariaDB, C, JavaScript, CSS)</p></li>
-    <li><p>Embedded SW – Sentry Controller – (Arduino C, JAVA)</p></li>
-  </ul><br>
-  <h3>Seminars</h3><hr>
-  <ul>
-    <li>Internet of Things</li>
-    <li>Motion Detection using (Python and) OpenCV</li>
+    <li><p>Embedded – Sentry Controller – (Arduino C, JAVA)</p></li>
+    <li><p>WebApp – Employee Directory – (ExpressJS, MongoDB, ReactJS, Sass)</p></li>
+    <li><p>WebApp – Gambling Platform – (Node/Typescript, Socket.io, MariaDB, Vue)</p></li>
+    <li><p>WebApp – Messenger – (ExpressJS, Socket.io, MongoDB, Redis, Angular 9, Sass)</p></li>
   </ul>
+  
+  
   <br class="hide-print">
   <div id="btn-group-fixed-bottom">
     <a id="link" class="btn-fixed hide-print" role="button" target="_blank" draggable="false" href="https://gitlab.com/sagarpanchal" title="GitLab">
@@ -148,35 +157,36 @@
       <div class="ripples"></div>
     </a>
   </div>
-<script type="text/javascript">
-  window.addEventListener("load", function() {
-    function t(t, e) {
-      var n = e.target, i = n.classList;
-      if (!i.contains("ripples")) return !1;
-      var d = n.getAttribute("data-event");
-      if (d && d != t) return !1;
-      n.setAttribute("data-event", t);
-      var o, a = n.getBoundingClientRect(), r = e.offsetX;
-      void 0 !== r ? o = e.offsetY : (r = e.clientX - a.left, o = e.clientY - a.top);
-      var s, c = document.createElement("div");
-      s = a.width == a.height ? 1.412 * a.width : Math.sqrt(a.width * a.width + a.height * a.height);
-      var u = 2 * s + "px";
-      c.style.width = u, c.style.height = u, c.style.marginLeft = -s + r + "px", c.style.marginTop = -s + o + "px", c.className = "ripple", n.appendChild(c), window.setTimeout(function() {
-        c.classList.add("held")
-      }, 0);
-      var h = "mousedown" == t ? "mouseup" : "touchend", l = function(t) {
-        document.removeEventListener(h, l), c.classList.add("done"), window.setTimeout(function() {
-          n.removeChild(c), n.children.length || (i.remove("active"), n.removeAttribute("data-event"))
-        }, 650)
-      };
-      document.addEventListener(h, l)
-    }
-    document.addEventListener("mousedown", function(e) {
-      0 == e.button && t(e.type, e)
-    }), document.addEventListener("touchstart", function(e) {
-      for (var n = 0; n < e.changedTouches.length; ++n) t(e.type, e.changedTouches[n])
-    })
-  });
-</script>
+  <script type="text/javascript">
+    window.addEventListener("load", function() {
+      function t(t, e) {
+        let n = e.target, i = n.classList;
+        if (!i.contains("ripples")) return !1;
+        let d = n.getAttribute("data-event");
+        if (d && d != t) return !1;
+        n.setAttribute("data-event", t);
+        let o, a = n.getBoundingClientRect(), r = e.offsetX;
+        void 0 !== r ? o = e.offsetY : (r = e.clientX - a.left, o = e.clientY - a.top);
+        let s, c = document.createElement("div");
+        s = a.width == a.height ? 1.412 * a.width : Math.sqrt(a.width * a.width + a.height * a.height);
+        let u = 2 * s + "px";
+        c.style.width = u, c.style.height = u, c.style.marginLeft = -s + r + "px", c.style.marginTop = -s + o + "px", c.className = "ripple", n.appendChild(c), window.setTimeout(function() {
+          c.classList.add("held")
+        }, 0);
+        let h = "mousedown" == t ? "mouseup" : "touchend", l = function(t) {
+          document.removeEventListener(h, l), c.classList.add("done"), window.setTimeout(function() {
+            n.removeChild(c), n.children.length || (i.remove("active"), n.removeAttribute("data-event"))
+          }, 650)
+        };
+        document.addEventListener(h, l)
+      }
+      document.addEventListener("mousedown", function(e) {
+        0 == e.button && t(e.type, e)
+      }), document.addEventListener("touchstart", function(e) {
+        for (let n = 0; n < e.changedTouches.length; ++n) t(e.type, e.changedTouches[n])
+      })
+    });
+  </script>
+  </div>
 </body>
 </html>
