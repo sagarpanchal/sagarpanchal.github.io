@@ -826,7 +826,16 @@
     <script type="text/javascript" async>
       // hide contact info from crawlers
       const loadHiddenInfo = async () => {
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await new Promise(resolve => {
+          const ac = new AbortController();
+          const handler = () => {
+            ac.abort();
+            setTimeout(resolve, 3000);
+          };
+          document.addEventListener('click', handler, { signal: ac.signal });
+          document.addEventListener('scroll', handler, { signal: ac.signal });
+          document.addEventListener('touchstart', handler, { signal: ac.signal });
+        });
         const bioBody = [
           `<span><b>Website: </b><a target="_blank" rel="noopener" href="https://sagarpanchal.github.io">sagarpanchal.github.io</a></span>`,
           `<span separator></span>`,
