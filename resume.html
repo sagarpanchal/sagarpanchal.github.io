@@ -826,16 +826,29 @@
     <script type="text/javascript" async>
       // hide contact info from crawlers
       const loadHiddenInfo = async () => {
-        await new Promise(resolve => {
-          const ac = new AbortController();
-          const handler = () => {
-            ac.abort();
-            setTimeout(resolve, 3000);
-          };
-          document.addEventListener('click', handler, { signal: ac.signal });
-          document.addEventListener('scroll', handler, { signal: ac.signal });
-          document.addEventListener('touchstart', handler, { signal: ac.signal });
+        await new Promise(function(resolve) {
+          const abortController = new AbortController();
+          let reachedBottom = false;
+
+          function handleScroll() {
+            const documentElement = document.documentElement;
+            const currentScroll = documentElement.scrollTop;
+            const viewportHeight = documentElement.clientHeight;
+            const totalHeight = documentElement.scrollHeight;
+
+            if (!reachedBottom && currentScroll + viewportHeight >= totalHeight) {
+              reachedBottom = true;
+            }
+
+            if (reachedBottom && currentScroll === 0) {
+              abortController.abort();
+              setTimeout(resolve, 5000);
+            }
+          }
+
+          document.addEventListener('scroll', handleScroll, { signal: abortController.signal });
         });
+
         const bioBody = [
           `<span><b>Website: </b><a target="_blank" rel="noopener" href="https://sagarpanchal.github.io">sagarpanchal.github.io</a></span>`,
           `<span separator></span>`,
