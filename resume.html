@@ -530,7 +530,7 @@
                 <p>&nbsp;:&nbsp;</p>
               </td>
               <td>
-                <p><mark>React Testing Library</mark>, <mark>Puppeteer/Cypress</mark>, <mark>Jest/Vitest</mark></p>
+                <p><mark>React Testing Library</mark>, <mark>Vitest</mark>/<mark>Jest</mark>, <mark>Puppeteer</mark>/<mark>Cypress</mark></p>
               </td>
             </tr>
             <tr>
@@ -563,7 +563,7 @@
                 <p>&nbsp;:&nbsp;</p>
               </td>
               <td>
-                <p><mark>css</mark>, <mark>sass</mark>, less, SVG (InkScape)</p>
+                <p>Tailwind CSS, Styled Components, Bootstrap Sass, <mark>css</mark>, <mark>sass</mark>, less, SVG (InkScape)</p>
               </td>
             </tr>
             <tr>
@@ -599,7 +599,7 @@
                 <p>&nbsp;:&nbsp;</p>
               </td>
               <td>
-                <p>Basic Computer Electronics &amp; Hardware</p>
+                <p>SCRUM, <mark>Jira</mark>/<mark>Asana</mark>, Basic Computer Electronics &amp; Hardware</p>
               </td>
             </tr>
           </tbody>
@@ -829,26 +829,25 @@
         await new Promise(function(resolve) {
           const abortController = new AbortController();
           let reachedBottom = false;
-
+      
           function handleScroll() {
-            const documentElement = document.documentElement;
-            const currentScroll = documentElement.scrollTop;
-            const viewportHeight = documentElement.clientHeight;
-            const totalHeight = documentElement.scrollHeight;
-
+            const currentScroll = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const totalHeight = document.documentElement.scrollHeight;
+      
             if (!reachedBottom && currentScroll + viewportHeight >= totalHeight) {
               reachedBottom = true;
             }
-
+      
             if (reachedBottom && currentScroll === 0) {
               abortController.abort();
               setTimeout(resolve, 5000);
             }
           }
-
+      
           document.addEventListener('scroll', handleScroll, { signal: abortController.signal });
         });
-
+      
         const bioBody = [
           `<span><b>Website: </b><a target="_blank" rel="noopener" href="https://sagarpanchal.github.io">sagarpanchal.github.io</a></span>`,
           `<span separator></span>`,
