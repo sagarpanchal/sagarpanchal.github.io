@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <title>Résumé&nbsp;|&nbsp;Sagar Panchal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        /* outline: 1px dotted rgba(0, 0, 0, 0.1); */
+      }
+
+      html {
+        font-family: "Recursive", sans-serif;
+        color: #383c4a;
+      }
+
+      code {
+        font-family: "Inconsolata", monospace;
+      }
+
+      body {
+        margin: 0.5rem 1.5rem;
+      }
+
+      abbr {
+        text-decoration: none;
+      }
+
+      h2 {
+        font-size: 1.375rem;
+      }
+
+      h3 {
+        font-size: 1.125rem;
+      }
+
+      p,
+      a,
+      ul {
+        font-size: 1rem;
+      }
+
+      hr {
+        margin: 0.5rem 0;
+        border: 0;
+        border-bottom: 1px solid #878a92;
+      }
+
+      ul {
+        padding: 0 0 0 1.375rem;
+        list-style-type: square;
+      }
+
+      h2,
+      h3,
+      p,
+      ul,
+      a {
+        margin: 0;
+        line-height: 200%;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      tr > td {
+        padding: 0;
+      }
+
+      button,
+      a[role="button"] {
+        position: relative;
+        overflow: hidden;
+      }
+
+      span.ripple {
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 600ms linear;
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+
+      .table tr > td:nth-child(1) {
+        text-align: right;
+        width: 8.625rem;
+        vertical-align: top;
+      }
+
+      .table tr > td:nth-child(2) {
+        vertical-align: top;
+      }
+
+      #btn-group-fixed {
+        position: fixed;
+        top: 1rem;
+        right: 1.5rem;
+      }
+
+      a.btn-fixed {
+        float: left;
+        font-size: 1.375rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #383c4a;
+        color: #fff;
+        text-align: center;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        -webkit-box-shadow: 0 0 0.1875rem #555;
+        box-shadow: 0 0 0.1875rem #555;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+
+      a.btn-fixed:not(:last-child) {
+        margin: 0 0.5rem 0 0;
+      }
+
+      a.btn-fixed::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 0 0.5625rem #555;
+        box-shadow: 0 0 9px #555;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 500ms;
+      }
+
+      a.btn-fixed:hover::before {
+        opacity: 1;
+      }
+
+      a.btn-fixed > svg {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+      }
+
+      a[target="_blank"]:not([href^="#"]):not([href="#!"]):not(.btn-fixed)::after {
+        content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+        margin: 0 3px 0 5px;
+      }
+
+      span[loading] {
+        background-color: #383c4a;
+      }
+
+      span[separator]:after {
+        content: "|";
+        padding-inline: 0.5rem;
+      }
+
+      #Me > #Me-Body {
+        display: flex;
+        flex-flow: row wrap;
+        & span:not([separator]) {
+          white-space: nowrap;
+        }
+      }
+
+      #Experience-Body > li > ul > li > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #Skills-Body {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        #Experience-Body > li > ul > li > div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #Experience-Body > li > ul > li > div > code {
+          font-family: "Recursive";
+        }
+      }
+
+      @media screen {
+        body {
+          background-color: #f9f9f9;
+        }
+
+        article {
+          max-width: 1024px;
+          margin: auto;
+          padding: 0.5rem;
+          padding-bottom: 80vh;
+        }
+
+        .hide-screen {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      @media (max-width: 767px) {
+        body {
+          margin: 8px;
+        }
+
+        html {
+          font-size: 0.75rem;
+        }
+
+        #btn-group-fixed {
+          position: fixed;
+          bottom: auto;
+          top: 0.375rem;
+          right: 0.5rem;
+        }
+
+        #Me > #Me-Body {
+          display: flex;
+          flex-flow: column wrap;
+
+          & span:nth-of-type(2n) {
+            display: none;
+          }
+        }
+      }
+    </style>
+    <style>
+      @media screen {
+        a:not([href^="#"]):not([href="#!"]):not(.btn-fixed) {
+          border-bottom: 2px solid #0ff;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        a:not([href^="#"]):not([href="#!"]):not(.btn-fixed):hover {
+          background: #0ff;
+        }
+
+        a[href^="#"] {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        a[href^="#"]:hover > h2,
+        a[href^="#"]:hover > h3 {
+          position: relative;
+        }
+
+        a[href^="#"]:hover > h2::before,
+        a[href^="#"]:hover > h3::before {
+          position: absolute;
+          left: -1rem;
+          content: "#";
+        }
+      }
+    </style>
+    <style>
+      @page {
+        margin: 0.5cm 2cm 0.5cm 2cm;
+      }
+
+      @media print {
+        body {
+          margin: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .hide-print {
+          display: none;
+        }
+
+        section {
+          page-break-inside: avoid;
+        }
+
+        mark {
+          color: #383c4a;
+          font-weight: 600;
+        }
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <article>
+      <section id="Me">
+        <a href="#Me">
+          <h2 id="Me-Header">Sagar Panchal</h2>
+        </a>
+        <hr />
+        <p id="Me-Body" class="about">
+          <span> <b>Website: </b><span loading>████████████</span> <span separator></span></span>
+          <span> <b>Email: </b><span loading>██████████████</span> <span separator></span></span>
+          <span> <b>Phone: </b><span loading>████████</span> <span separator></span></span>
+          <span> <b>City: </b><span loading>██████</span> </span>
+        </p>
+      </section>
+      <br />
+      <!-- <section id="AboutMe">
+      <a href="#AboutMe"><h3 id="AboutMe-Header">Summary</h3></a>
+      <hr />
+      <p>
+        3+ years experienced JavaScript/Typescript Developer with hands-on experience in React and NodeJS. Proficient
+        in translating designs & wire-frames into high-quality code. Automating repetitive tasks using shell
+        scripting, NodeJS and CI/CD tools. Experienced with Linux distributions and firewalls. Working on PWAs, web apps
+        and web services using MERN stack. Cares about scalablility, code-quality and architecture. Believes in
+        continuos learning and improvement. Writing well-crafted and self-explanatory code using OOP, DRY, KISS and
+        SOLID principles.
+      </p>
+    </section> -->
+      <br />
+      <section id="Experience">
+        <a href="#Experience">
+          <h3 id="Experience-Header">Experience</h3>
+        </a>
+        <hr />
+        <ul id="Experience-Body">
+          <li>
+            <p>
+              <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/ocean-technologies-group/"
+                >Ocean Technologies Group</a
+              >
+            </p>
+            <ul>
+              <li>
+                <div>
+                  <span
+                    ><mark>Senior Frontend Developer</mark> - TypeScript (React, React Testing Library, Vitest)</span
+                  >
+                  <code>August 2024 - Present&nbsp;</code>
+                </div>
+                <ul>
+                  <li>Developing/Maintaining Ocean Learning Platform</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/dhiwise/">DhiWise</a>
+            </p>
+            <ul>
+              <li>
+                <div>
+                  <span><mark>SDE III</mark> - TypeScript (AST, React, Node.js, Bash, GitLab CI)</span>
+                  <code>Feb 2023 - July 2024&nbsp;</code>
+                </div>
+                <ul>
+                  <li>Developing/Maintaining on DhiWise front-end, Figma to React Generator</li>
+                  <li>Developing/Maintaining command-line utilities for development</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/diamnow/"
+                >DiamNow LLP (A Coruscate company)</a
+              >
+            </p>
+            <ul>
+              <li>
+                <div>
+                  <span><mark>Technical Lead</mark> - TypeScript (React, Node.js, Bash, GitLab CI)</span>
+                  <code>Apr 2021 - Feb 2023</code>
+                </div>
+                <ul>
+                  <li>Mentoring front-end developers with JavaScript and React</li>
+                  <li>Developing/Maintaining on DiamNow front-end; Optimizing for performance</li>
+                  <li>Developing/Maintaining command-line utilities for development</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                rel="noopener"
+                href="https://www.linkedin.com/company/coruscateventures/"
+                >Coruscate Ventures Pvt. Ltd.</a
+              >
+            </p>
+            <ul>
+              <li>
+                <div>
+                  <span><mark>Programmer Analyst</mark> - JavaScript (React, Node.js, Gitlab CI)</span>
+                  <code>Jul 2020 - Mar 2021</code>
+                </div>
+                <ul>
+                  <li>Developing/Maintaining on DiamNow front-end</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/narola-infotech/"
+                >Narola Infotech</a
+              >
+            </p>
+            <ul>
+              <li>
+                <div>
+                  <span>
+                    <mark>Sr. Software Engineer</mark> - TypeScript (React, Angular, Vue.js, Express.js, Socket.IO)
+                  </span>
+                  <code>Jan 2020 - Jul 2020</code>
+                </div>
+                <ul>
+                  <li>
+                    Worked on various web-apps and PWAs with RESTful APIs with MERN/MEAN Stack, Socket.IO and Vue.js
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <span><mark>Jr. Software Engineer</mark> - TypeScript (React, Angular, Express.js, Socket.IO)</span>
+                  <code>Jan 2019 - Dec 2019</code>
+                </div>
+                <ul>
+                  <li>Worked on various web-apps and PWAs with RESTful APIs with MERN Stack and Socket.IO</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <br />
+      <section id="Skills">
+        <a href="#Skills">
+          <h3 id="Skills-Header">Skills</h3>
+        </a>
+        <hr />
+        <table id="Skills-Body" class="table">
+          <tbody>
+            <tr>
+              <td>
+                <p>Programming</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p>
+                  <mark>TypeScript</mark> (<mark>Vite</mark>/Rollup, Webpack, <mark>AST</mark>, <mark>Node.js</mark>,
+                  <mark>React</mark>, Angular, Socket.IO, Express.js), <mark>CLI</mark> (<mark>Oclif</mark>,
+                  <mark>Bash</mark>, <mark>Zsh</mark>, Bash Completion) (Developing command-line utils and CI-CD)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Testing</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p>
+                  <mark>React Testing Library</mark>, <mark>Vitest</mark>/<mark>Jest</mark>,
+                  <mark>Puppeteer</mark>/<mark>Cypress</mark>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Database</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p><mark>MongoDB</mark> (MongooseJS), Redis (ioredis)</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Source&nbsp;Control/DevOps</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p><mark>Git</mark> (GitHub, GitLab, BitBucket, Azure DevOps)</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Designing</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p>
+                  Tailwind CSS, Styled Components, Bootstrap Sass, <mark>css</mark>, <mark>sass</mark>, less, SVG
+                  (InkScape)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>IDEs/Tools</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p>
+                  <mark>Visual Studio Code</mark>, <mark>Chrome</mark>/<mark>Firefox</mark>, Insomnia REST/Postman, SSH,
+                  Robo 3T, FileZilla, InkScape
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Operating&nbsp;Systems</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p>Mac OS, Windows 10/11, Ubuntu Desktop/Server, Debian</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Other</p>
+              </td>
+              <td>
+                <p>&nbsp;:&nbsp;</p>
+              </td>
+              <td>
+                <p>SCRUM, <mark>Jira</mark>/<mark>Asana</mark>, Basic Computer Electronics &amp; Hardware</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <br />
+      <section id="WillingToWorkWith">
+        <a href="#WillingToWorkWith">
+          <h3 id="WillingToWorkWith-Header">Willing to work with</h3>
+        </a>
+        <hr />
+        <p>TypeScript, JS DOM, React, Node.js, Socket.IO, MongoDB/Postgres, Redis.</p>
+      </section>
+      <br />
+      <section id="Education">
+        <a href="#Education">
+          <h3 id="Education-Header">Education</h3>
+        </a>
+        <hr />
+        <ul id="Education-Body">
+          <li>
+            <p>S. V. Patel College Of Computer Science and Business Management (Surat, India)</p>
+            <ul>
+              <li>
+                <p>Bachelor of Computer Applications</p>
+              </li>
+            </ul>
+          </li>
+          <!--<li>
+            <p>Bhagwan Mahavir College of Management (Surat, India)</p>
+            <ul>
+              <li>
+                <p>Master of Computer Applications</p>
+              </li>
+            </ul>
+          </li>-->
+        </ul>
+      </section>
+      <br />
+      <section id="Projects">
+        <a href="#Projects">
+          <h3 id="Projects-Header">Projects</h3>
+        </a>
+        <hr />
+        <ul id="Projects-Body">
+          <li>
+            <p>Web - Dictionary - (PHP, MariaDB, C, JavaScript, CSS)</p>
+            <ul>
+              <li>
+                Ability to add, edit, find words. Searching using soundex and custom ranking functionality (for verbs,
+                prefix and suffix) to get exact, partial and related matches.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Website - SoftwareHub - (PHP, MySQL, ShellScript, JavaScript, CSS)</p>
+            <ul>
+              <li>
+                A website to share/download files and software using convenient UI and role-based (admin/user/guest)
+                auth.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Embedded - Sentry Controller - (Arduino C, JAVA)</p>
+            <ul>
+              <li>
+                Created using Processing Framework to demonstrate motion tracking.
+                <!-- The system Detects and points towards moving objects. -->
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Web - Employee Directory - (Express.js, MongoDB, React, Sass)</p>
+            <ul>
+              <li>Save and find employee data. Advance filtering sorting by datatype.</li>
+            </ul>
+          </li>
+          <li>
+            <p>Web - Sports Gambling Platform - (Node/Typescript, Socket.IO, MariaDB, Vue.js)</p>
+            <ul>
+              <li>Sports Gambling platform made in collaboration with back-end team using Vue.</li>
+            </ul>
+          </li>
+          <li>
+            <p>Web - Messenger - (Express.js, Socket.IO, MongoDB, Redis, Angular 9, Sass)</p>
+            <ul>
+              <li>
+                Created to demonstrate messaging and notification functionality similar to popular messaging
+                applications.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>Framework - Smur - (Express.js, Socket.IO, MongoDB, Redis, Passport.js, OpenAPI v3)</p>
+            <ul>
+              <li>Boilerplate framework to quickly start scalable and organized RESTful API/Socket.IO projects.</li>
+            </ul>
+          </li>
+          <li>
+            <p>Web - DiamNow - (React, Redux Toolkit, Antd, Sails.js, MongoDB)</p>
+            <ul>
+              <li>
+                DiamNow focuses on digitizing the online diamond buying, selling and bidding experience through our SaaS
+                platforms and custom made solutions.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <br />
+      <section id="Courses">
+        <a href="#Courses">
+          <h3 id="Courses-Header">Courses</h3>
+        </a>
+        <hr />
+        <ul id="Courses-Body">
+          <li>
+            <p><mark>Basic Computer Electronics &amp; Hardware</mark> training from Jetking</p>
+          </li>
+          <li>
+            <p>The Complete <mark>Android N</mark> Developer Course by Rob Percival</p>
+          </li>
+          <li>
+            <p><mark>WordPress Theme</mark> Development with Bootstrap by Brad Hussey</p>
+          </li>
+          <li>
+            <p><mark>Node.js</mark> - The Complete Guide to Build <mark>RESTful</mark> APIs by Mosh Hamedani</p>
+          </li>
+          <li>
+            <p><mark>Node.js</mark> - The Complete Guide by Maximilian Schwarzmüller</p>
+          </li>
+          <li>
+            <p><mark>Mastering React</mark> by Mosh Hamedani</p>
+          </li>
+          <li>
+            <p><mark>React</mark> - The Complete Guide by Maximilian Schwarzmüller</p>
+          </li>
+          <li>
+            <p><mark>Angular</mark> - The Complete Guide by Maximilian Schwarzmüller</p>
+          </li>
+          <li>
+            <p><mark>Docker</mark> Mastery: with Kubernetes + Swarm by Bret Fisher</p>
+          </li>
+        </ul>
+      </section>
+      <br />
+      <section id="Seminars">
+        <a href="#Seminars">
+          <h3 id="Seminars-Header">Seminars Given</h3>
+        </a>
+        <hr />
+        <ul id="Seminars-Body">
+          <li>How do <mark>React Hooks</mark> work?</li>
+          <li>Getting started with <mark>React</mark></li>
+          <li>Getting started with <mark>JavaScript</mark></li>
+          <li><mark>Motion Detection</mark> (using Python and OpenCV)</li>
+          <li>What is <mark>Internet of Things</mark>?</li>
+        </ul>
+      </section>
+    </article>
+    <br class="hide-print" />
+    <div id="btn-group-fixed">
+      <a
+        id="Link"
+        class="btn-fixed hide-print"
+        role="button"
+        target="_blank"
+        draggable="false"
+        href="https://github.com/sagarpanchal?tab=repositories&q=&sort=stargazers"
+        title="GitLab"
+        rel="noopener"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 252 252" style="fill: #ffffff">
+          <g transform="scale(2.6)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+              fill="#fff"
+            />
+          </g>
+        </svg>
+      </a>
+      <a
+        id="Print"
+        class="btn-fixed hide-print"
+        role="button"
+        draggable="false"
+        href="#!"
+        title="Print this Page"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 252 252" style="fill: #ffffff">
+          <g transform="translate(-10.08,-10.08) scale(1.08,1.08)">
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,252v-252h252v252z" fill="none"></path>
+              <g fill="#ffffff">
+                <path
+                  d="M55.44,10.08v65.52h-30.24c-8.33616,0 -15.12,6.78384 -15.12,15.12v90.72c0,8.33616 6.78384,15.12 15.12,15.12h30.24v45.36h141.12v-45.36h30.24c8.33616,0 15.12,-6.78384 15.12,-15.12v-90.72c0,-8.33616 -6.78384,-15.12 -15.12,-15.12h-30.24v-65.52zM65.52,20.16h120.96v55.44h-120.96zM206.64,100.8c5.5692,0 10.08,4.5108 10.08,10.08c0,5.5692 -4.5108,10.08 -10.08,10.08c-5.5692,0 -10.08,-4.5108 -10.08,-10.08c0,-5.5692 4.5108,-10.08 10.08,-10.08zM65.52,151.2h120.96v45.36v35.28h-120.96v-35.28zM85.68,166.32c-1.81761,-0.02571 -3.50825,0.92925 -4.42455,2.4992c-0.9163,1.56995 -0.9163,3.51165 0,5.0816c0.9163,1.56995 2.60695,2.5249 4.42455,2.4992h80.64c1.81761,0.02571 3.50825,-0.92925 4.42455,-2.4992c0.9163,-1.56995 0.9163,-3.51165 0,-5.0816c-0.9163,-1.56995 -2.60695,-2.5249 -4.42455,-2.4992zM85.68,186.48c-1.81761,-0.02571 -3.50825,0.92925 -4.42455,2.4992c-0.9163,1.56995 -0.9163,3.51165 0,5.0816c0.9163,1.56995 2.60695,2.5249 4.42455,2.4992h60.48c1.81761,0.02571 3.50825,-0.92925 4.42455,-2.4992c0.9163,-1.56995 0.9163,-3.51165 0,-5.0816c-0.9163,-1.56995 -2.60695,-2.5249 -4.42455,-2.4992zM85.68,206.64c-1.81761,-0.02571 -3.50825,0.92925 -4.42455,2.4992c-0.9163,1.56995 -0.9163,3.51165 0,5.0816c0.9163,1.56995 2.60695,2.5249 4.42455,2.4992h80.64c1.81761,0.02571 3.50825,-0.92925 4.42455,-2.4992c0.9163,-1.56995 0.9163,-3.51165 0,-5.0816c-0.9163,-1.56995 -2.60695,-2.5249 -4.42455,-2.4992z"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+    <script type="text/javascript" async>
+      const loadInfo = async (immediate = false) => {
+        const bioBody = [
+          `<span><b>Website: </b><a target="_blank" rel="noopener" href="https://sagarpanchal.github.io">sagarpanchal.github.io</a></span>`,
+          `<span separator></span>`,
+          `<span><b>Email: </b><a href="mailto:panchal.sagar@outlook.com">panchal.sagar@outlook.com</a></span>`,
+          `<span separator></span>`,
+          `<span><b>Phone: </b><a href="tel:+91 84 69 553399">+91 84 69 553399</a></span>`,
+          `<span separator></span>`,
+          `<span><b>City: </b><a target="_blank" rel="noopener" href="https://maps.google.com/?q=Nakshatra+Nebula+Surat+India">Surat, India</a></span>`,
+        ].join("");
+        document.querySelector("#Me-Body").innerHTML = bioBody;
+      };
+
+      const createRipple = (event) => {
+        const button = event.currentTarget;
+
+        const circle = document.createElement("span");
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+        circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+        circle.classList.add("ripple");
+
+        const ripple = button.getElementsByClassName("ripple")[0];
+        if (ripple) ripple.remove();
+
+        button.appendChild(circle);
+      };
+
+      const loadRipples = () => {
+        const buttons = [...document.querySelectorAll("button"), ...document.querySelectorAll("a[role='button']")];
+        console.log(buttons)
+        for (const button of buttons) {
+          button.addEventListener("click", createRipple);
+        }
+      };
+
+      window.addEventListener("load", () => {
+        loadInfo();
+        loadRipples();
+      });
+    </script>
+  </body>
+</html>

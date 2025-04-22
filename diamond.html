@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+  <title>Diamond&nbsp;|&nbsp;Sagar Panchal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css" />
+  <head>
+    <style>
+      @media print {
+        .page-break-before {
+          page-break-before: always !important;
+          margin-top: 0 !important;
+        }
+      }
+      @media screen {
+        .markdown-body {
+          min-width: 838px;
+          max-width: 838px;
+          background-color: rgb(255, 255, 255);
+          overflow: auto;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(225, 228, 232);
+          border-image: initial;
+          padding: 32px;
+          margin: 20px auto;
+        }
+      }
+    </style>
+    <style>
+      #btn-group-fixed-bottom {
+        position: fixed;
+        bottom: 1rem;
+        right: 1.5rem;
+      }
+      a.btn-fixed {
+        float: left;
+        position: relative;
+        font-size: 1.375rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #383c4a;
+        color: #fff;
+        text-align: center;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        box-shadow: 0 0 0.1875rem #555;
+        user-select: none;
+      }
+      a.btn-fixed:not(:last-child) {
+        margin: 0 0.5rem 0 0;
+      }
+      a.btn-fixed::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 0 0.5625rem #555;
+        box-shadow: 0 0 9px #555;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 500ms;
+      }
+      a.btn-fixed:hover::before {
+        opacity: 1;
+      }
+      a.btn-fixed > svg,
+      a.btn-fixed > img {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+      }
+
+      @media screen {
+        .hide-screen {
+          display: none;
+        }
+      }
+      @media print {
+        body {
+          margin: 0;
+        }
+        .hide-print {
+          display: none;
+        }
+      }
+    </style>
+    <style>
+      .ripples,
+      .ripples.fill::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .ripples {
+        display: block;
+        overflow: hidden;
+        border-radius: inherit;
+        -webkit-mask-image: -webkit-radial-gradient(circle, #fff, #000);
+        mask-image: radial-gradient(circle, #fff, #000);
+      }
+      .ripples.fill::after {
+        content: "";
+      }
+      .ripples.fill {
+        border-radius: 1000000px;
+      }
+      .ripples .ripple {
+        position: absolute;
+        border-radius: 100%;
+        background: currentColor;
+        opacity: 0.2;
+        width: 0;
+        height: 0;
+        -webkit-transition: opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+        transition: opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+        -o-transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out, -webkit-transform 0.4s ease-out;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        pointer-events: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .ripples .ripple.held {
+        opacity: 0.4;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+      .ripples .ripple.done {
+        opacity: 0;
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+  </head>
+  <body style="margin: 0">
+    <link rel="stylesheet" type="text/css" href="https://sagarpanchal.github.io/markdown.css" id="_theme" />
+    <div id="_html" class="markdown-body">
+      <h3 id="types">
+        <a class="anchor" name="types" href="#types"><span class="octicon octicon-link"></span></a>Types
+      </h3>
+      <h4 id="based-on-inventory">
+        <a class="anchor" name="based-on-inventory" href="#based-on-inventory"
+          ><span class="octicon octicon-link"></span></a
+        >Based on inventory
+      </h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Carat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Parcel</td>
+            <td>Polished, Mostly not certified, Sold in bulk</td>
+            <td>&gt;0.01 &amp;&amp; &lt;0.29</td>
+          </tr>
+          <tr>
+            <td>Single</td>
+            <td>Polished, Mostly certified, Sold single</td>
+            <td>&gt;0.30</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 id="based-on-certification">
+        <a class="anchor" name="based-on-certification" href="#based-on-certification"
+          ><span class="octicon octicon-link"></span></a
+        >Based on certification
+      </h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Not Certified</td>
+            <td>Mostly Rough, Not certified by a lab</td>
+          </tr>
+          <tr>
+            <td>Certified</td>
+            <td>Polished, Certified by a lab</td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>
+          Certificates are issued by Labs. Example labs are GIA, HRD, IGI, AGS, IIDGR, GSI, CGL, GCAL, NGTC, RDC, DCLA,
+          GWLAB, GHI, NONE, RAP, PGS
+        </p>
+      </blockquote>
+      <h3 id="characteristics-shape--4cs">
+        <a class="anchor" name="characteristics-shape--4cs" href="#characteristics-shape--4cs"
+          ><span class="octicon octicon-link"></span></a
+        >Characteristics (Shape &amp; 4Cs)
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Characteristic</th>
+            <th>Desscription</th>
+            <th>Affects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shape</td>
+            <td>Shape</td>
+            <td>Price</td>
+          </tr>
+          <tr>
+            <td>Cut</td>
+            <td>Style guide</td>
+            <td>Price, Brilliance</td>
+          </tr>
+          <tr>
+            <td>Clarity</td>
+            <td>Level of Internal/external flaws</td>
+            <td>Price, Brilliance</td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>Color, Intensity, Overtone</td>
+            <td>Price, Brilliance</td>
+          </tr>
+          <tr>
+            <td>Carat</td>
+            <td>Physical weight</td>
+            <td>Price</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 id="shape">
+        <a class="anchor" name="shape" href="#shape"><span class="octicon octicon-link"></span></a>Shape
+      </h4>
+      <h5 id="round">
+        <a class="anchor" name="round" href="#round"><span class="octicon octicon-link"></span></a>Round
+      </h5>
+      <ul>
+        <li>Regular shape</li>
+      </ul>
+      <h5 id="fancy">
+        <a class="anchor" name="fancy" href="#fancy"><span class="octicon octicon-link"></span></a>Fancy
+      </h5>
+      <ul>
+        <li>
+          Princess, Emerald, Asscher, Cushion, Oval, Pear, Marquise, Heart, Radiant, Baguette, European Cut, Old Miner,
+          Star, Rose, Half Moon, Square, Bullets, Choki, Tappers, Flanders, Briolette, Pentagonal, Hexagonal, Octagonal,
+          Triangle, Trilliant, Calf, Shield, Lozenge, Kite, etc
+        </li>
+      </ul>
+      <h4 id="cut">
+        <a class="anchor" name="cut" href="#cut"><span class="octicon octicon-link"></span></a>Cut
+      </h4>
+      <ul>
+        <li>Ideal, Excellent, Very Good, Good, Fair, Poor (only for round shape)</li>
+      </ul>
+      <h4 id="clarity">
+        <a class="anchor" name="clarity" href="#clarity"><span class="octicon octicon-link"></span></a>Clarity
+      </h4>
+      <ul>
+        <li>
+          <p>Clarity scale has 6 categories, 11 specific grades</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Grades</th>
+                <th>Inclusions under 10x magnification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Flawless</td>
+                <td>FL</td>
+                <td>No, No blemishes</td>
+              </tr>
+              <tr>
+                <td>Internally Flawless</td>
+                <td>IF</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Very, Very Slightly Included</td>
+                <td>VVS1, VVS2</td>
+                <td>Light, Difficult to see</td>
+              </tr>
+              <tr>
+                <td>Very Slightly Included</td>
+                <td>VS1, VS2</td>
+                <td>Minor, Observable with effort</td>
+              </tr>
+              <tr>
+                <td>Slightly Included</td>
+                <td>SI1, SI2</td>
+                <td>Noticeable</td>
+              </tr>
+              <tr>
+                <td>Included</td>
+                <td>I1, I2, I3</td>
+                <td>Obvious, affects transparency/brilliance</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+      <h4 id="color">
+        <a class="anchor" name="color" href="#color"><span class="octicon octicon-link"></span></a>Color
+      </h4>
+      <h5 id="white">
+        <a class="anchor" name="white" href="#white"><span class="octicon octicon-link"></span></a>White
+      </h5>
+      <ul>
+        <li><strong>Sub-categories</strong> - D, E, F, G, H, I, J, K, L, M, N, O-P, S-T, Q-R, U-T, W-X, and Y-Z</li>
+      </ul>
+      <h5 id="fancy-1">
+        <a class="anchor" name="fancy-1" href="#fancy-1"><span class="octicon octicon-link"></span></a>Fancy
+      </h5>
+      <ul>
+        <li>
+          Color consists of <strong>Main color</strong>, <strong>Intensity</strong> (of main color),
+          <strong>Overtone</strong> (secondary color),
+          <ul>
+            <li>
+              <strong>Main colors</strong> are Yellow, Pink, Blue, Red, Green, Purple, Orange, Violet, Gray, Black,
+              Brown, Champagne, Cognac, Chameleon, White, Other
+            </li>
+            <li>
+              <strong>Intensity</strong> levels are Faint, Very Light, Light, Fancy Light, Fancy, Fancy Dark, Fancy
+              Intense, Fancy Vivid, Fancy deep
+            </li>
+            <li>
+              <strong>Overtones</strong> are None, Yellow, Yellowish, Pink, Pinkish, Blue, Bluish, Red, Reddish, Green,
+              Greenish, Purple, Purplish, Orange, Orangey, Gray, Grayish, Black, Brown, Brownish, Champagne, Cognac,
+              Chameleon, Violet-ish, White
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h4 id="carat-ct">
+        <a class="anchor" name="carat-ct" href="#carat-ct"><span class="octicon octicon-link"></span></a>Carat (ct)
+      </h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.01 to 0.29</td>
+            <td>Parcel. Sold in bulk. Mostly not certified</td>
+          </tr>
+          <tr>
+            <td>0.30 Plus</td>
+            <td>Single. Sold single. Certified</td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>1ct = 200mg</p>
+      </blockquote>
+      <div class="page-break-before"></div>
+      <h3 id="other-characteristics">
+        <a class="anchor" name="other-characteristics" href="#other-characteristics"
+          ><span class="octicon octicon-link"></span></a
+        >Other Characteristics
+      </h3>
+      <h4 id="fluorescence">
+        <a class="anchor" name="fluorescence" href="#fluorescence"><span class="octicon octicon-link"></span></a
+        >Fluorescence
+      </h4>
+      <ul>
+        <li>Visible light emission when exposed to certian amount of UV</li>
+        <li><strong>Levels</strong> - None, Very Slight, Slight, Faint, Medium, Strong, Very Strong</li>
+      </ul>
+      <h4 id="polish">
+        <a class="anchor" name="polish" href="#polish"><span class="octicon octicon-link"></span></a>Polish
+      </h4>
+      <ul>
+        <li>Surface smoothness</li>
+        <li><strong>Levels</strong> - Ideal, Excellent, Very Good, Good, Fair and Poor</li>
+      </ul>
+      <h4 id="symmetry">
+        <a class="anchor" name="symmetry" href="#symmetry"><span class="octicon octicon-link"></span></a>Symmetry
+      </h4>
+      <ul>
+        <li>Exactness of the shape, arrangement and placement of the facets</li>
+        <li>Facets are small surfaces polished to a glassy smoothnesss</li>
+        <li><strong>Ranks</strong>: Ideal, Excellent, Very Good, Good, Fair and Poor</li>
+      </ul>
+      <h4 id="color-shade">
+        <a class="anchor" name="color-shade" href="#color-shade"><span class="octicon octicon-link"></span></a>Color
+        Shade
+      </h4>
+      <ul>
+        <li>Color Shade</li>
+        <li>
+          <strong>Levels</strong> - None, White, Mixed, Yellow, Brown, Green, Grey, Black, Pink, Blue, Faint Brown,
+          Faint Green, Other
+        </li>
+      </ul>
+      <div class="page-break-before"></div>
+      <h3 id="measurement-parameters">
+        <a class="anchor" name="measurement-parameters" href="#measurement-parameters"
+          ><span class="octicon octicon-link"></span></a
+        >Measurement Parameters
+      </h3>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/archive/e/e8/20110818162155%21PC_DiamondAnatomy_B-W.jpg"
+        style="margin-top: 1rem; margin-bottom: 1rem; width: 100%"
+      />
+      <h4 id="lenthmax-mm">
+        <a class="anchor" name="lenthmax-mm" href="#lenthmax-mm"><span class="octicon octicon-link"></span></a>Lenth/Max
+        (mm)
+      </h4>
+      <ul>
+        <li>From Top to bottom. "Max" for round diamonds</li>
+      </ul>
+      <h4 id="widthmin-mm">
+        <a class="anchor" name="widthmin-mm" href="#widthmin-mm"><span class="octicon octicon-link"></span></a>Width/Min
+        (mm)
+      </h4>
+      <ul>
+        <li>Perpendicular to length. "Min" for round Diamonds</li>
+      </ul>
+      <h4 id="depth-mm">
+        <a class="anchor" name="depth-mm" href="#depth-mm"><span class="octicon octicon-link"></span></a>Depth (mm)
+      </h4>
+      <ul>
+        <li>Distance between table and culet</li>
+      </ul>
+      <h4 id="depth-">
+        <a class="anchor" name="depth-" href="#depth-"><span class="octicon octicon-link"></span></a>Depth (%)
+      </h4>
+      <ul>
+        <li><code>Depth / Width * 100</code></li>
+      </ul>
+      <h4 id="lw-ratio-lengthwidth-ratio-ratio">
+        <a class="anchor" name="lw-ratio-lengthwidth-ratio-ratio" href="#lw-ratio-lengthwidth-ratio-ratio"
+          ><span class="octicon octicon-link"></span></a
+        >L/W Ratio (Length/Width Ratio, Ratio)
+      </h4>
+      <ul>
+        <li><code>Length / Width</code>. Commonly used for fancy shapes</li>
+      </ul>
+      <h4 id="girdle-range">
+        <a class="anchor" name="girdle-range" href="#girdle-range"><span class="octicon octicon-link"></span></a>Girdle
+        (Range)
+      </h4>
+      <ul>
+        <li>Space between crown and pavilion</li>
+        <li>
+          <strong>Levels</strong> - Extremely Thin, Very Thin, Thin, Slightly Thin, Medium, Slightly Thick, Thick, Very
+          Thick, Extremely Thick
+        </li>
+      </ul>
+      <!-- ### Girdle (%) -->
+
+      <h4 id="girdle-condition">
+        <a class="anchor" name="girdle-condition" href="#girdle-condition"><span class="octicon octicon-link"></span></a
+        >Girdle Condition
+      </h4>
+      <ul>
+        <li>Polished, Faceted, Bruted</li>
+      </ul>
+      <h4 id="culet-mm">
+        <a class="anchor" name="culet-mm" href="#culet-mm"><span class="octicon octicon-link"></span></a>Culet (mm)
+      </h4>
+      <ul>
+        <li>Below Pavilion. Can be a point or small facet</li>
+        <li>
+          <strong>Levels</strong> - None, Very Small, Small, Medium, Slightly Large, Large, Very Large, Extremely Large
+        </li>
+      </ul>
+      <h4 id="table-mm">
+        <a class="anchor" name="table-mm" href="#table-mm"><span class="octicon octicon-link"></span></a>Table (mm)
+      </h4>
+      <ul>
+        <li>Top, flat, parallel to girdle</li>
+      </ul>
+      <h4 id="table-">
+        <a class="anchor" name="table-" href="#table-"><span class="octicon octicon-link"></span></a>Table (%)
+      </h4>
+      <ul>
+        <li><code>Table Width / Width * 100</code></li>
+      </ul>
+      <h4 id="crown-angle-deg">
+        <a class="anchor" name="crown-angle-deg" href="#crown-angle-deg"><span class="octicon octicon-link"></span></a
+        >Crown Angle (deg)
+      </h4>
+      <ul>
+        <li>Number of degrees between the plane of the table and the bezel facets (lower crown facets)</li>
+        <li>
+          Determines amount of light reflected into the pavilion at an angle which allows it to be reflected through the
+          crown
+        </li>
+      </ul>
+      <h4 id="crown-height-mm">
+        <a class="anchor" name="crown-height-mm" href="#crown-height-mm"><span class="octicon octicon-link"></span></a
+        >Crown Height (mm)
+      </h4>
+      <ul>
+        <li>Distance between girdle edge and table</li>
+      </ul>
+      <h4 id="crown-height-">
+        <a class="anchor" name="crown-height-" href="#crown-height-"><span class="octicon octicon-link"></span></a>Crown
+        Height (%)
+      </h4>
+      <ul>
+        <li><code>Crown Height / Average Diameter * 100</code></li>
+      </ul>
+      <h4 id="pavilion-angle-deg">
+        <a class="anchor" name="pavilion-angle-deg" href="#pavilion-angle-deg"
+          ><span class="octicon octicon-link"></span></a
+        >Pavilion Angle (deg)
+      </h4>
+      <ul>
+        <li>Number of degrees between the plane of the table and the pavilion facets</li>
+        <li>
+          Determines amount of the light travelling into the lower part of the diamond which reflects through the crown
+        </li>
+      </ul>
+      <h4 id="pavilion-depth-">
+        <a class="anchor" name="pavilion-depth-" href="#pavilion-depth-"><span class="octicon octicon-link"></span></a
+        >Pavilion Depth (%)
+      </h4>
+      <ul>
+        <li><code>Pavilion Depth / Girdle Diameter * 100</code></li>
+      </ul>
+      <h4 id="diametermm">
+        <a class="anchor" name="diametermm" href="#diametermm"><span class="octicon octicon-link"></span></a
+        >Diameter(mm)
+      </h4>
+      <ul>
+        <li>Girdle diameter</li>
+      </ul>
+      <h4 id="3ex">
+        <a class="anchor" name="3ex" href="#3ex"><span class="octicon octicon-link"></span></a>3EX
+      </h4>
+      <ul>
+        <li>Excellent cut, polish, symmetry</li>
+      </ul>
+      <h4 id="2ex">
+        <a class="anchor" name="2ex" href="#2ex"><span class="octicon octicon-link"></span></a>2EX
+      </h4>
+      <ul>
+        <li>Excellent cut, polish,</li>
+      </ul>
+      <h4 id="3vg">
+        <a class="anchor" name="3vg" href="#3vg"><span class="octicon octicon-link"></span></a>3VG+
+      </h4>
+      <ul>
+        <li>Very good cut, polish, symmetry</li>
+      </ul>
+      <h4 id="no-bgm">
+        <a class="anchor" name="no-bgm" href="#no-bgm"><span class="octicon octicon-link"></span></a>No BGM
+      </h4>
+      <ul>
+        <li>No Brown, Green, Milky</li>
+      </ul>
+      <h4 id="inclusion">
+        <a class="anchor" name="inclusion" href="#inclusion"><span class="octicon octicon-link"></span></a>Inclusion
+      </h4>
+      <ul>
+        <li>Small imperfections introduced at the time of formation</li>
+      </ul>
+      <h5 id="eye-clean">
+        <a class="anchor" name="eye-clean" href="#eye-clean"><span class="octicon octicon-link"></span></a>Eye Clean
+      </h5>
+      <ul>
+        <li>
+          <p>Unofficial term. Describes inclusions with the naked eye</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Visible</td>
+                <td>Inclusion Visible</td>
+              </tr>
+              <tr>
+                <td>EC1</td>
+                <td>Inclusion is not visible</td>
+              </tr>
+              <tr>
+                <td>EC2</td>
+                <td>Medium inclusion is Visible (25% - 49%)</td>
+              </tr>
+              <tr>
+                <td>EC3</td>
+                <td>Medium inclusion is Visible (50% - 74%)</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+      <h5 id="milky">
+        <a class="anchor" name="milky" href="#milky"><span class="octicon octicon-link"></span></a>Milky
+      </h5>
+      <ul>
+        <li>
+          <p>Cloudy look. Occurs at levels of diamond processing. Range is 0 to 4</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>non-existent</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>most opaque or cloudy</td>
+              </tr>
+              <tr>
+                <td>1-2</td>
+                <td>difficult to identify without a benchmark or trained eyes</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+      <h5 id="heart--arrow">
+        <a class="anchor" name="heart--arrow" href="#heart--arrow"><span class="octicon octicon-link"></span></a>Heart
+        &amp; Arrow
+      </h5>
+      <ul>
+        <li>Precision-cut round, Exact angles and symmetry</li>
+        <li>
+          Shows <em>hearts and arrows</em> pattern when viewed through a special tool
+          <ul>
+            <li>Arrows are visible from the top of the diamond</li>
+            <li>Hearts are visible when the diamond is face-down</li>
+          </ul>
+        </li>
+        <li>
+          Heart &amp; Arrow can be graded in different categories such as,
+          <ul>
+            <li>
+              <strong>EX</strong>: Extreme, <strong>VG</strong>: Very Good, <strong>NV</strong>: None Visible,
+              <strong>N</strong>: None
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h5 id="black-table">
+        <a class="anchor" name="black-table" href="#black-table"><span class="octicon octicon-link"></span></a>Black
+        Table
+      </h5>
+      <ul>
+        <li>Tiny black spots. Noticeable on the table</li>
+      </ul>
+      <h5 id="white-table">
+        <a class="anchor" name="white-table" href="#white-table"><span class="octicon octicon-link"></span></a>White
+        Table
+      </h5>
+      <ul>
+        <li>Tiny white spots. Noticeable on the table</li>
+      </ul>
+      <h5 id="open-table">
+        <a class="anchor" name="open-table" href="#open-table"><span class="octicon octicon-link"></span></a>Open Table
+      </h5>
+      <ul>
+        <li>Flat/unfaceted/visible table</li>
+      </ul>
+      <h5 id="black-crown">
+        <a class="anchor" name="black-crown" href="#black-crown"><span class="octicon octicon-link"></span></a>Black
+        Crown
+      </h5>
+      <ul>
+        <li>Tiny black spots. Noticeable on the crown</li>
+      </ul>
+      <h5 id="white-crown">
+        <a class="anchor" name="white-crown" href="#white-crown"><span class="octicon octicon-link"></span></a>White
+        Crown
+      </h5>
+      <ul>
+        <li>Tiny white spots. Noticeable on the crown</li>
+      </ul>
+      <h5 id="open-crown">
+        <a class="anchor" name="open-crown" href="#open-crown"><span class="octicon octicon-link"></span></a>Open Crown
+      </h5>
+      <ul>
+        <li>Flat/unfaceted/visible crown</li>
+      </ul>
+      <h5 id="open-culet">
+        <a class="anchor" name="open-culet" href="#open-culet"><span class="octicon octicon-link"></span></a>Open Culet
+      </h5>
+      <ul>
+        <li>Flat/unfaceted/visible culet</li>
+      </ul>
+      <h5 id="open-pavilion">
+        <a class="anchor" name="open-pavilion" href="#open-pavilion"><span class="octicon octicon-link"></span></a>Open
+        Pavilion
+      </h5>
+      <ul>
+        <li>Flat/unfaceted/visible pavilion</li>
+      </ul>
+      <h5 id="key-to-symbol">
+        <a class="anchor" name="key-to-symbol" href="#key-to-symbol"><span class="octicon octicon-link"></span></a>Key
+        to symbol
+      </h5>
+      <ul>
+        <li>It describes the types of inclusions for the diamonds</li>
+        <li>
+          <strong>Types of inclusions</strong>: Natural, Indented Natural, Cavity, Chip, Needle, Feather, Crystal, Knot,
+          Crystal Surface, Bearding, Bruise, Cleavage, Cloud, Etch Channel, Extra Facet, Internal Graining, Internal
+          Inscription, Internal Laser Drilling, Laser Drill Hole, Manufacturing Remnant, No Inclusion, Pinpoint, Surface
+          Graining, Twinning Wisp, Reflecting Surface Graining and Minor Details of Polish."
+        </li>
+      </ul>
+    </div>
+    <div id="btn-group-fixed-bottom">
+      <a
+        id="print"
+        class="btn-fixed hide-print"
+        role="button"
+        onclick="window.print();"
+        title="Print this Page"
+        draggable="false"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 252 252" style="fill: #ffffff">
+          <g transform="translate(-10.08,-10.08) scale(1.08,1.08)">
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <path d="M0,252v-252h252v252z" fill="none"></path>
+              <g fill="#ffffff">
+                <path
+                  d="M55.44,10.08v65.52h-30.24c-8.33616,0 -15.12,6.78384 -15.12,15.12v90.72c0,8.33616 6.78384,15.12 15.12,15.12h30.24v45.36h141.12v-45.36h30.24c8.33616,0 15.12,-6.78384 15.12,-15.12v-90.72c0,-8.33616 -6.78384,-15.12 -15.12,-15.12h-30.24v-65.52zM65.52,20.16h120.96v55.44h-120.96zM206.64,100.8c5.5692,0 10.08,4.5108 10.08,10.08c0,5.5692 -4.5108,10.08 -10.08,10.08c-5.5692,0 -10.08,-4.5108 -10.08,-10.08c0,-5.5692 4.5108,-10.08 10.08,-10.08zM65.52,151.2h120.96v45.36v35.28h-120.96v-35.28zM85.68,166.32c-1.81761,-0.02571 -3.50825,0.92925 -4.42455,2.4992c-0.9163,1.56995 -0.9163,3.51165 0,5.0816c0.9163,1.56995 2.60695,2.5249 4.42455,2.4992h80.64c1.81761,0.02571 3.50825,-0.92925 4.42455,-2.4992c0.9163,-1.56995 0.9163,-3.51165 0,-5.0816c-0.9163,-1.56995 -2.60695,-2.5249 -4.42455,-2.4992zM85.68,186.48c-1.81761,-0.02571 -3.50825,0.92925 -4.42455,2.4992c-0.9163,1.56995 -0.9163,3.51165 0,5.0816c0.9163,1.56995 2.60695,2.5249 4.42455,2.4992h60.48c1.81761,0.02571 3.50825,-0.92925 4.42455,-2.4992c0.9163,-1.56995 0.9163,-3.51165 0,-5.0816c-0.9163,-1.56995 -2.60695,-2.5249 -4.42455,-2.4992zM85.68,206.64c-1.81761,-0.02571 -3.50825,0.92925 -4.42455,2.4992c-0.9163,1.56995 -0.9163,3.51165 0,5.0816c0.9163,1.56995 2.60695,2.5249 4.42455,2.4992h80.64c1.81761,0.02571 3.50825,-0.92925 4.42455,-2.4992c0.9163,-1.56995 0.9163,-3.51165 0,-5.0816c-0.9163,-1.56995 -2.60695,-2.5249 -4.42455,-2.4992z"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <div class="ripples"></div>
+      </a>
+      <a
+        id="link"
+        class="btn-fixed hide-print"
+        role="button"
+        target="_blank"
+        draggable="false"
+        href="https://github.com/sagarpanchal"
+        title="GitHub"
+      >
+        <svg
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:cc="http://creativecommons.org/ns#"
+          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"
+          id="svg2"
+          version="1.1"
+          xml:space="preserve"
+          width="114.8625"
+          height="114.8625"
+          viewBox="0 0 114.8625 114.8625"
+        >
+          <defs id="defs6" />
+          <g id="g10" transform="matrix(1.25,0,0,-1.25,0,114.8625)">
+            <g id="g12" transform="scale(0.1,0.1)">
+              <path
+                d="M 901.543,500.352 500.352,901.527 c -23.094,23.11 -60.567,23.11 -83.692,0 L 333.359,818.211 439.031,712.535 c 24.563,8.293 52.727,2.727 72.297,-16.847 19.688,-19.696 25.203,-48.102 16.699,-72.75 L 629.883,521.094 c 24.648,8.496 53.066,3.004 72.754,-16.711 27.5,-27.492 27.5,-72.059 0,-99.574 -27.52,-27.516 -72.078,-27.516 -99.61,0 -20.683,20.703 -25.8,51.097 -15.312,76.582 l -95,94.992 0,-249.969 c 6.699,-3.32 13.027,-7.742 18.613,-13.312 27.5,-27.497 27.5,-72.059 0,-99.598 -27.5,-27.488 -72.09,-27.488 -99.57,0 -27.5,27.539 -27.5,72.101 0,99.598 6.797,6.789 14.668,11.925 23.066,15.363 l 0,252.281 c -8.398,3.438 -16.25,8.531 -23.066,15.367 -20.828,20.821 -25.84,51.395 -15.156,76.977 L 292.422,777.285 17.3242,502.211 c -23.10545,-23.129 -23.10545,-60.602 0,-83.711 L 418.535,17.3242 c 23.098,-23.10545 60.559,-23.10545 83.692,0 L 901.543,416.641 c 23.113,23.113 23.113,60.605 0,83.711"
+                style="fill: #ffffff; fill-opacity: 1; fill-rule: nonzero; stroke: none"
+                id="path14"
+              />
+            </g>
+          </g>
+        </svg>
+        <div class="ripples"></div>
+      </a>
+    </div>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        function ripple(type, event) {
+          const container = event.target;
+          const classList = container.classList;
+          if (!classList.contains("ripples")) return false;
+
+          const dataEvent = container.getAttribute("data-event");
+          if (dataEvent && dataEvent != type) return false;
+          container.setAttribute("data-event", type);
+
+          const boundingClientRect = container.getBoundingClientRect();
+          const offsetX = 0 !== event.offsetX ? event.offsetX : event.clientX - boundingClientRect.left;
+          const offsetY = 0 !== event.offsetX ? event.offsetY : event.clientY - boundingClientRect.top;
+
+          const size =
+            boundingClientRect.width == boundingClientRect.height
+              ? 1.412 * boundingClientRect.width
+              : Math.sqrt(
+                  boundingClientRect.width * boundingClientRect.width +
+                    boundingClientRect.height * boundingClientRect.height
+                );
+
+          const diameter = 2 * size + "px";
+          const circle = document.createElement("div");
+          circle.style.width = diameter;
+          circle.style.height = diameter;
+          circle.style.marginLeft = -size + offsetX + "px";
+          circle.style.marginTop = -size + offsetY + "px";
+          circle.className = "ripple";
+          container.appendChild(circle);
+          setTimeout(() => circle.classList.add("held"), 0);
+
+          const endEvent = "mousedown" == type ? "mouseup" : "touchend",
+            listener = (t) => {
+              document.removeEventListener(endEvent, listener);
+              circle.classList.add("done");
+
+              setTimeout(() => {
+                container.removeChild(circle);
+                if (!container.children.length) {
+                  classList.remove("active");
+                  container.removeAttribute("data-event");
+                }
+              }, 650);
+            };
+
+          document.addEventListener(endEvent, listener);
+        }
+
+        document.addEventListener("mousedown", (event) => {
+          if (0 === event.button) {
+            ripple(event.type, event);
+          }
+        });
+
+        document.addEventListener("touchstart", (event) => {
+          for (let n = 0; n < event.changedTouches.length; ++n) {
+            ripple(event.type, event.changedTouches[n]);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
